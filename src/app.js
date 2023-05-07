@@ -36,6 +36,6 @@ router(server);
 const jsonRouter = jsonServer.router(db);
 server.use('/api', jsonRouter);
 
-server.listen(8000, () => {
+server.listen(3000, () => {
     console.log('JSON Server is running');
 });
