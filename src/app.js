@@ -34,6 +34,13 @@ server.use((req, res, next) => {
 
 router(server);
 const jsonRouter = jsonServer.router(db);
+
+server.use((req, res, next) => {
+    setTimeout(() => {
+        next()
+    }, 1000)
+})
+
 server.use('/api', jsonRouter);
 
 server.listen(3000, () => {
